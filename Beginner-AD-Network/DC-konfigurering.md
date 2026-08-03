@@ -17,7 +17,7 @@ Jag valde 192.168.10.10 eftersom det är en privat IP-adress och passar bra i en
 
 DNS pekades mot serverns egen IP-adress eftersom Domain Controllern även kommer att fungera som DNS-server. Active Directory använder DNS för att hitta tjänster och Domain Controllers i domänen. 
 
-Jag lämnade default gateway tom eftersom detta är en isolerad labbmiljö. En gateway används när en dator behöver kommunicera med andra nätverk, exempelvis internet. Eftersom mina servrar och klienter kommer ligga i samma interna nätverk behöver de ingen gateway för att kommunicera med varandra.
+Jag lämnade default gateway tom eftersom detta är en isolerad labbmiljö. En gateway används när en dator behöver kommunicera med andra nätverk, exempelvis internet. Eftersom min server och användare kommer ligga i samma interna nätverk behöver de ingen gateway för att kommunicera med varandra.
 
 Efter detta skapade jag ett separat internt virtuellt nätverk för labbmiljön. Syftet var att hålla miljön isolerad från mitt vanliga hemnätverk och skapa en mer kontrollerad testmiljö där jag själv kan styra IP-adresser och nätverkskommunikation.
 
