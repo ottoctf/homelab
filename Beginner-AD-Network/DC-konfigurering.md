@@ -15,7 +15,7 @@ DNS-server: 192.168.10.10
 
 Jag valde 192.168.10.10 eftersom det är en privat IP-adress och passar bra i en separat labbmiljö. Det viktiga är inte exakt vilken privat IP-adress som används, utan att nätverket är korrekt planerat och att adressen inte krockar med andra enheter.
 
-DNS pekades mot serverns egen IP-adress eftersom Domain Controllern även kommer att fungera som DNS-server. Active Directory använder DNS för att hitta tjänster och Domain Controllers i domänen. En extern DNS-server som exempelvis Google DNS känner inte till de interna DNS-posterna för min domän och kan därför inte hjälpa klienter att hitta min Domain Controller.
+DNS pekades mot serverns egen IP-adress eftersom Domain Controllern även kommer att fungera som DNS-server. Active Directory använder DNS för att hitta tjänster och Domain Controllers i domänen. 
 
 Jag lämnade default gateway tom eftersom detta är en isolerad labbmiljö. En gateway används när en dator behöver kommunicera med andra nätverk, exempelvis internet. Eftersom mina servrar och klienter kommer ligga i samma interna nätverk behöver de ingen gateway för att kommunicera med varandra.
 
