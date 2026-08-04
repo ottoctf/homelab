@@ -27,9 +27,6 @@ När Windows begärde autentisering använde jag ett administratörskonto från 
 
 För att verifiera att anslutningen fungerade loggade jag in på klienten med domänens Administrator-konto. Eftersom kontot finns i Active Directory kunde det användas på klientdatorn efter att den anslutits till domänen.
 
-
-Detta nedanför till ovanför troubleshoot ska vara på en egen .md fil sedan som ska heta AD Konfigurering.
-
 Därefter skapade jag två egna Organizational Units (OU):
 
 OU-Computers – där jag flyttade datorobjektet AD-User från den inbyggda Computers-containern.
