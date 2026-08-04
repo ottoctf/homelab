@@ -42,7 +42,7 @@ För administratörskontot bob.admin lade jag till gruppen Domain Admins under M
 
 Vid felsökning började jag med att kontrollera namnuppslagning.
 
-nslookup lab.local
+´nslookup lab.local´
 
 Detta fungerade och visade att klienten kunde hitta domänen via DNS.
 
