@@ -11,3 +11,5 @@ Installationen genomfördes som en vanlig Windows-installation, men VM:n konfigu
 - Firmware: UEFI
 - TPM: 2.0
 - Secure Boot: Aktiverat
+
+Jag satte en statisk IP Adress på denna maskin till `192.168.10.20`. Domain controllern har IP Adressen `192.168.10.10`.
