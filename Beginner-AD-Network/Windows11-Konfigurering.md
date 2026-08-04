@@ -19,6 +19,11 @@ Jag konfigurerade följande nätverksinställningar:
 
 IP-adress: 192.168.10.20 Subnet mask: 255.255.255.0 Default gateway: Lämnades tom DNS-server: 192.168.10.10
 
-Jag provade sedan `ping 192.168.10.10` samt `nslookup lab.local`
+## Troubleshooting
 
-Ping gav 0% loss och nslookup visade 192.168.10.10 vilket är ett bra tecken
+### DNS
+`nslookup lab.local` Fungerade men `nslookup dc01.lab.local` gav Request timed out. I Powershell testade jag Get-Service DNS. Fick svaret `Cannot find any service with service name 'DNS'`. Det betyder troligtvis att DNS Server rollen inte är installerad på domain controllern.
+
+På Domain Controllern så körde jag powershell. Jag använde kommandot `Get-WindowsFeature AD-Domain-Services,DNS` för att se ifall DNS var installerat. Vilket det var för mig.
+
+Jag körde sen nltest /dsgetdc:lab.local vilket gav rätt resultat så DNS problemet var inget kritiskt och troligtvis bara DNS Serverns reverse lookup/PTR saknas eller tar lång tid.
