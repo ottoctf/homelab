@@ -1,4 +1,4 @@
-# Konfigurering av Active Directory miljön.
+# Konfigurering av Active Directory miljön.(Work in progress)
 
 Jag började med att skapa två egna Organizational Units (OU):
 
