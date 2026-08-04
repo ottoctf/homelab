@@ -12,4 +12,9 @@ Installationen genomfördes som en vanlig Windows-installation, men VM:n konfigu
 - TPM: 2.0
 - Secure Boot: Aktiverat
 
-Jag satte en statisk IP Adress på denna maskin till `192.168.10.20`. Domain controllern har IP Adressen `192.168.10.10`.
+Nästa steg var att konfigurera en statisk IP-adress. Det viktiga här är att IP Adressen har samma nät som Domain controllern samt att DNS pekar mot
+Domain Controllerns IP Adress och inte exempelvis Google 8.8.8.8.
+
+Jag konfigurerade följande nätverksinställningar:
+
+IP-adress: 192.168.10.20 Subnet mask: 255.255.255.0 Default gateway: Lämnades tom DNS-server: 192.168.10.10
