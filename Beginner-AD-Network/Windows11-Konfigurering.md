@@ -19,4 +19,6 @@ Jag konfigurerade följande nätverksinställningar:
 
 IP-adress: 192.168.10.20 Subnet mask: 255.255.255.0 Default gateway: Lämnades tom DNS-server: 192.168.10.10
 
-Jag provade sedan att `ping 192.168.10.10` samt `nslookup lab.local`.
+Jag provade sedan `ping 192.168.10.10` samt `nslookup lab.local`
+
+Ping gav 0% loss och nslookup visade 192.168.10.10 vilket är ett bra tecken
