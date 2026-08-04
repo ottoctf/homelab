@@ -59,16 +59,6 @@ Request timed out.
 
 Eftersom Active Directory är beroende av DNS ville jag säkerställa att DNS-tjänsten faktiskt var installerad på Domain Controllern.
 
-Jag testade först på klienten med:
-
-Get-Service DNS
-
-vilket gav:
-
-Cannot find any service with service name 'DNS'
-
-Detta är dock förväntat på en vanlig klient eftersom DNS Server-tjänsten endast finns installerad på servrar med DNS Server-rollen.
-
 På Domain Controllern verifierade jag därför installationen med:
 
 Get-WindowsFeature AD-Domain-Services,DNS
