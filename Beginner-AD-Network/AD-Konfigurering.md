@@ -7,8 +7,16 @@ Jag började med att skapa två egna Organizational Units (OU):
     - bob
 * OU-Admins - där jag skapade ett administratör konto
     - bob.admin
+ 
+För administratörskontot bob.admin lade jag till gruppen Domain Admins under Member Of. Detta gav kontot administrativa rättigheter i domänen, medan Bob behöll vanliga användarbehörigheter enligt principen om least privilege. 
+Jag verifierade sedan att båda kontona kunde logga in på klientdatorn.
 
- Sedan skapade jag en GPO för OU-Users där jag:
+## GPO
+
+### Standard User Policy
+
+Denna GPO länkas till OU-Users och kommer vara standard policyn för konton som ej behöver mer rättigheter.
+
 * Blockerade kontrollpanelen
   - <img width="555" height="123" alt="bild" src="https://github.com/user-attachments/assets/ed6674e9-13e0-470d-8a9e-2f0292548dbf" />
 
@@ -20,7 +28,13 @@ Jag började med att skapa två egna Organizational Units (OU):
 
 * Aktiverade skärmlås som startar efter 15 min inaktivitet.
 
-Sedan loggade jag in på `Bobs` konto för att testa att allt fungerade.
+### Admin Policy
 
-För administratörskontot bob.admin lade jag till gruppen Domain Admins under Member Of. Detta gav kontot administrativa rättigheter i domänen, medan Bob behöll vanliga användarbehörigheter enligt principen om least privilege. 
-Jag verifierade sedan att båda kontona kunde logga in på klientdatorn.
+Denna GPO länkas till OU-Admins och är mest till för att logga vad som görs på kontot.
+
+* PowerShell Logging
+    - <img width="463" height="137" alt="bild" src="https://github.com/user-attachments/assets/18cf750a-18ae-4cf5-93ab-038f37f12c8f" />
+* Process Creation Logging
+    - EJ FÄRDIG
+
+
